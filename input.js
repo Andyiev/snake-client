@@ -15,6 +15,9 @@ const handleUserInput = function(key) {
   } else if (key === 'd') {
     console.log("D - move right");
       conn.write("Move: right");
+  } else if (key === 'm') {
+      console.log("m = is message to all - Hi!");
+        conn.write("Say: Hi!");
   } else if (key === '\u0003') {
     console.log("Exit");
     process.exit();
