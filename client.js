@@ -1,7 +1,4 @@
 const net = require("net");
-const stdin = process.stdin;
-stdin.setEncoding('utf8');
-
 // establishes a connection with the game server
 const connect = function () {
   const conn = net.createConnection({
