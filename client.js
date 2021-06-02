@@ -4,7 +4,7 @@ const connect = function () {
   const conn = net.createConnection({
     host: "135.23.222.131", // IP address here,
     port: 50542, }, () => {
-    console.log("Connection established!");
+    console.log("Successfully Connected to server!");
     conn.on('data', (data) => {
       console.log('message from server', data);
     })
@@ -12,6 +12,8 @@ const connect = function () {
   conn.setEncoding("utf8");
   const name = 'AVI';
   conn.write(`Name: ${name}`);
+  setTimeout(function() {
+    conn.write("Move: up")}, 2000);
   return conn;
 };
 
