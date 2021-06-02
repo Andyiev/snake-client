@@ -12,8 +12,11 @@ const connect = function () {
   conn.setEncoding("utf8");
   const name = 'AVI';
   conn.write(`Name: ${name}`);
-  setTimeout(function() {
-    conn.write("Move: up")}, 2000);
+  setInterval(function() {
+    conn.write("Move: up");
+    conn.write("Move: left");
+    conn.write("Move: right");
+    conn.write("Move: down")}, 300);
   return conn;
 };
 
