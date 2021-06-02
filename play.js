@@ -5,8 +5,11 @@ const connect = function () {
   const conn = net.createConnection({
     host: "135.23.222.131", // IP address here,
     port: 50542, }, () => {
-      console.log("Connection established!");
-    });// PORT number here,
+    console.log("Connection established!");
+    conn.on('data', (data) => {
+      console.log('message from server', data);
+    })
+  });// PORT number here,
 
 
   // interpret incoming data as text
